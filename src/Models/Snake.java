@@ -11,7 +11,7 @@ public class Snake {
 
 	public Snake(int startXLocation, int startYLocation, int movementAmount) {
 		direction = Direction.UP;
-		segments.add(new Segment(startXLocation, startYLocation, Color.green));
+		segments.add(new Segment(startXLocation, startYLocation, Color.BLUE));
 		this.movementAmount = movementAmount;
 	}
 
@@ -80,7 +80,7 @@ public class Snake {
 				newYLocation += movementAmount;
 				break;
 		}
-		segments.add(0, new Segment(newXLocation, newYLocation, Color.green));
+		segments.add(0, new Segment(newXLocation, newYLocation, Color.blue));
 	}
 
 	public void draw(Graphics2D g) {
