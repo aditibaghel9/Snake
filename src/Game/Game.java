@@ -14,14 +14,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.util.Random;
-
 import javax.swing.JPanel;
 import javax.swing.Timer;
-
-import GUIControls.Window;
-import Models.Direction;
-import Models.Pellet;
-import Models.Snake;
 
 public class Game extends JPanel {
 	private Timer timer;
@@ -33,7 +27,6 @@ public class Game extends JPanel {
 	private int numberOfColumns;
 	private final int MOVEMENT_DELAY = 7; // higher value == snake moves slower
 	private int movementDelayCounter;
-	private int score = 0;
 
 	public Game() {
 		Window.setTitle("Snake");
@@ -79,9 +72,6 @@ public class Game extends JPanel {
 					pellet.setXLocation(newPelletLocation.x * GRID_SIZE);
 					pellet.setYLocation(newPelletLocation.y * GRID_SIZE);
 					snake.addSegment();
-
-					// Increase the score
-    				score += 10;
 				}
 
 				movementDelayCounter++;
@@ -191,11 +181,6 @@ public class Game extends JPanel {
 		brush.setColor(Color.black);
 		brush.setFont(new Font("Arial", 0, 10));
 		brush.drawString("Created by: ARTech Industries", getWidth() - 146, getHeight() - 5);
-
-		// Display the score in the top-right corner
-		brush.setColor(Color.WHITE); 
-		brush.setFont(new Font("Arial", Font.BOLD, 20)); 
-		brush.drawString("Score: " + score, getWidth() - 146, getHeight() + 5); 
 	}
 
 	// paints the grid graphics to the screen
