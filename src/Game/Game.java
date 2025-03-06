@@ -17,6 +17,11 @@ import java.util.Random;
 
 import javax.swing.JPanel;
 import javax.swing.Timer;
+import GUIControls.Window;
+import Models.Direction;
+import Models.Pellet;
+import Models.Snake;
+
 
 import GUIControls.Window;
 import Models.Direction;
