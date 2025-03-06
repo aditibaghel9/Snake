@@ -1,33 +1,34 @@
 package Models;
 
+import SwingShapes.Ellipse;
+import SwingShapes.Rectangle;
 import java.awt.Color;
 import java.awt.Graphics2D;
 
-import SwingShapes.Ellipse;
-
 public class Segment {
 	private Ellipse segment;
+	private Rectangle rectangle;
 	
 	public Segment(int startXLocation, int startYLocation, Color color) {
-		segment = new Ellipse();
-		segment.setColor(color);
-		segment.setSize(20,  20);
-		segment.setLocation(startXLocation, startYLocation);
+		rectangle = new Rectangle();
+		rectangle.setColor(color);
+		rectangle.setSize(20,  20);
+		rectangle.setLocation(startXLocation, startYLocation);
 	}
 
 	public int getXLocation() {
-		return segment.getXLocation();
+		return rectangle.getXLocation();
 	}
 
 	public int getYLocation() {
-		return segment.getYLocation();
+		return rectangle.getYLocation();
 	}
 	
 	public void setColor(Color color) {
-		segment.setColor(color);
+		rectangle.setColor(color);
 	}
 	
 	public void draw(Graphics2D g) {
-		segment.paint(g);
+		rectangle.paint(g);
 	}
 }
