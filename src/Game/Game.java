@@ -93,8 +93,20 @@ public class Game extends JPanel {
 							nextDirection = Direction.LEFT;
 						}
 					}
+					// if UP Arrow was pressed
+					if (e.getKeyCode() == KeyEvent.VK_LEFT) {
+						if (snake.getDirection() == Direction.UP || snake.getDirection() == Direction.DOWN) {
+							nextDirection = Direction.LEFT;
+						}
+					}
 					 // if D Key was pressed
 					if (e.getKeyCode() == KeyEvent.VK_D) {
+						if (snake.getDirection() == Direction.UP || snake.getDirection() == Direction.DOWN) {
+							nextDirection = Direction.RIGHT;
+						}
+					}
+					// if Right Arrow was pressed
+					if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
 						if (snake.getDirection() == Direction.UP || snake.getDirection() == Direction.DOWN) {
 							nextDirection = Direction.RIGHT;
 						}
@@ -105,8 +117,20 @@ public class Game extends JPanel {
 							nextDirection = Direction.UP;
 						}
 					}
+					// if Up Arrow was pressed
+					if (e.getKeyCode() == KeyEvent.VK_UP) {
+						if (snake.getDirection() == Direction.LEFT || snake.getDirection() == Direction.RIGHT) {
+							nextDirection = Direction.UP;
+						}
+					}
 					// if S Key was pressed
 					if (e.getKeyCode() == KeyEvent.VK_S) {
+						if (snake.getDirection() == Direction.LEFT || snake.getDirection() == Direction.RIGHT) {
+							nextDirection = Direction.DOWN;
+						}
+					}
+					// if Down Arrow was pressed
+					if (e.getKeyCode() == KeyEvent.VK_DOWN) {
 						if (snake.getDirection() == Direction.LEFT || snake.getDirection() == Direction.RIGHT) {
 							nextDirection = Direction.DOWN;
 						}
