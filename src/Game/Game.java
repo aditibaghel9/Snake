@@ -152,6 +152,7 @@ public class Game extends JPanel {
 		Point pelletStartLocation = getRandomGridCoords();
 		pellet.setXLocation(pelletStartLocation.x * GRID_SIZE);
 		pellet.setYLocation(pelletStartLocation.y * GRID_SIZE);
+		snake.addSegment();
 
 		// game loop starts iterating here
 		timer.start();
