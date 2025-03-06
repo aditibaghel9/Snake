@@ -62,7 +62,7 @@ public class Snake {
 
 	public void move() {
 		Segment head = segments.get(0);
-		head.setColor(new Color(0, 0, 139));
+		head.setColor(new Color(0, 130, 255));
 		segments.remove(segments.size() - 1);
 		int newXLocation = head.getXLocation();
 		int newYLocation = head.getYLocation();
